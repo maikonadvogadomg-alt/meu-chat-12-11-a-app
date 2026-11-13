@@ -1,0 +1,51 @@
+{
+  "name": "meu-chat-12-11-a",
+  "version": "1.0.0",
+  "description": "Meu-Chat-12-11-A",
+  "author": "Maikon",
+  "private": true,
+  "main": "electron/main.cjs",
+  "portaDoPrograma": 7867,
+  "devDependencies": {
+    "electron": "33.2.1",
+    "electron-builder": "25.1.8"
+  },
+  "build": {
+    "appId": "com.maikonadvogadomgalt.meuchat1211a.pc",
+    "productName": "Meu-Chat-12-11-A",
+    "executableName": "meu-chat-12-11-a",
+    "directories": {
+      "output": "release"
+    },
+    "asar": false,
+    "files": [
+      "**/*",
+      "!android/**",
+      "!.github/**",
+      "!release/**",
+      "!exe/**",
+      "!node_modules/.cache/**",
+      "!*.zip",
+      "!.sk/**",
+      "!apk.config.json"
+    ],
+    "win": {
+      "target": [
+        "nsis",
+        "portable"
+      ],
+      "icon": "icons/icon-512.png"
+    },
+    "nsis": {
+      "oneClick": true,
+      "perMachine": false,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "Meu-Chat-12-11-A",
+      "artifactName": "meu-chat-12-11-a-Instalar.exe"
+    },
+    "portable": {
+      "artifactName": "meu-chat-12-11-a-sem-instalar.exe"
+    }
+  }
+}
